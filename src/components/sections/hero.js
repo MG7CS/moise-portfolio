@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { withPrefix } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 import { navDelay, loaderDelay } from '@utils';
@@ -86,7 +87,7 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a className="email-link" href={resumeUrl} target="_blank" rel="noreferrer">
+    <a className="email-link" href={withPrefix(resumeUrl)} target="_blank" rel="noreferrer">
       Check out my resume!
     </a>
   );

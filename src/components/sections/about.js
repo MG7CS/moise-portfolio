@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
+import { useStaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
@@ -114,6 +115,26 @@ const StyledPic = styled.div`
 `;
 
 const About = () => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        file(relativePath: { eq: "me.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(
+              width: 500
+              quality: 95
+              layout: CONSTRAINED
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+            )
+          }
+        }
+      }
+    `,
+  );
+
+  const headshot = getImage(data.file);
+
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -176,14 +197,9 @@ const About = () => {
 
         <StyledPic>
           <div className="wrapper">
-            <StaticImage
-              className="img"
-              src="../../images/me.jpg"
-              width={500}
-              quality={95}
-              formats={['AUTO', 'WEBP', 'AVIF']}
-              alt="Headshot"
-            />
+            {headshot && (
+              <GatsbyImage image={headshot} className="img" alt="Moise Gasana" />
+            )}
           </div>
         </StyledPic>
       </div>

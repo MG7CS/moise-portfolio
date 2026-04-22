@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { Link, withPrefix } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled, { css } from 'styled-components';
@@ -206,7 +206,7 @@ const Nav = ({ isHome }) => {
   );
 
   const ResumeLink = (
-    <a className="resume-button" href={resumeUrl} target="_blank" rel="noopener noreferrer">
+    <a className="resume-button" href={withPrefix(resumeUrl)} target="_blank" rel="noopener noreferrer">
       Resume
     </a>
   );
