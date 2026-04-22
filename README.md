@@ -1,17 +1,29 @@
 <div align="center">
-  <img alt="Moise Gasana logo" src="src/images/logo.png" width="100" />
+  <img alt="Moise Gasana mark" src="src/images/logo.png" width="100" />
 </div>
-<h1 align="center">
-  Moise Gasana
-</h1>
-<p align="center">
-  Full-stack engineer — CS senior at <a href="https://www.brown.edu/">Brown University</a> · building AI products
-  that solve real problems for real people.
-</p>
-<p align="center">
-  My personal website adapted from the fourth iteration of <a href="https://brittanychiang.com" target="_blank">brittanychiang.com</a> built with <a href="https://www.gatsbyjs.com/" target="_blank">Gatsby</a> and <a href="https://www.gatsbyjs.com/docs/reference/gatsby-cli/" target="_blank">Gatsby CLI</a> for static output.
-</p>
 
-![Site preview](static/og.png)
+# Moise Gasana
 
-Special thanks to <a href="https://brittanychiang.com" target="_blank">Brittany Chiang</a> for the <a href="https://brittanychiang.com" target="_blank">original v4</a> template that inspired this project.
+**Full-stack engineer** — computer science senior at [Brown University](https://www.brown.edu/) · building products that use AI in practical ways to solve real problems for real people.
+
+This repository is a static personal site: projects, experience, education, and contact. It is built with [Gatsby](https://www.gatsbyjs.com/) and React, with content in Markdown and assets under `static/` and `content/`.
+
+My personal website adapted from [brittanychiang.com](https://brittanychiang.com) built with [Gatsby](https://www.gatsbyjs.com/) and Gatsby CLI for static output.
+
+---
+
+## Project layout (short)
+
+| Path        | Role                                      |
+| ----------- | ----------------------------------------- |
+| `src/`      | Pages, components, styles, config         |
+| `content/`  | Markdown for jobs, projects, education    |
+| `static/`   | Files served as-is (favicons, PDFs, `og` image) |
+
+## Preview
+
+![Homepage preview](static/og.png)
+
+## License
+
+This project is released under the **MIT** license. See [`LICENSE`](LICENSE).
