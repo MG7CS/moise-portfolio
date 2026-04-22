@@ -4,7 +4,7 @@
 
 # Moise Gasana
 
-**Full-stack engineer** — computer science at [Brown University](https://www.brown.edu/) · building products that use AI in practical ways to solve real problems for real people.
+**Full-stack engineer** — computer science at [Brown University](https://www.brown.edu/) · building products that solve real problems.
 
 This repository is a static personal site: projects, experience, education, and contact. It is built with [Gatsby](https://www.gatsbyjs.com/) and React, with content in Markdown and assets under `static/` and `content/`.
 
